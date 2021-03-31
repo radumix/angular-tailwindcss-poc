@@ -1,5 +1,5 @@
 <div>
-    <nav class="bg-gray-800">
+    <nav class="bg-orange-500">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -54,9 +54,10 @@
               </div>
             </div>
           </div>
+
           <div class="-mr-2 flex md:hidden">
             <!-- Mobile menu button -->
-            <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <button  (click)="toggleMenu()" type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <!--
                 Heroicon name: outline/menu
@@ -80,7 +81,7 @@
       </div>
   
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="md:hidden" id="mobile-menu">
+      <div [hidden]="hideShow" class=" md:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
@@ -96,7 +97,7 @@
         <div class="pt-4 pb-3 border-t border-gray-700">
           <div class="flex items-center px-5">
             <div class="flex-shrink-0">
-              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <img class="h-10 w-10 rounded-full" src="../../assets/photo-14.jpg" alt="">
             </div>
             <div class="ml-3">
               <div class="text-base font-medium leading-none text-white">Tom Cook</div>
@@ -124,8 +125,9 @@
     </header>
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-
-        <h1>Data Table</h1>
+        <div>
+          <h2 class="text-2xl font-semibold leading-tight">Data Table</h2>
+        </div>
         <app-data-table></app-data-table>
         
         <div class="hidden sm:block" aria-hidden="true">
@@ -134,7 +136,9 @@
             </div>
         </div>
 
-        <h1>Form Layout</h1>
+        <div>
+          <h2 class="text-2xl font-semibold leading-tight">Form Layout</h2>
+      </div>
         <app-form-layout></app-form-layout>
         
         <div class="hidden sm:block" aria-hidden="true">
@@ -143,11 +147,23 @@
             </div>
         </div>
 
-        <h1>Modal Dailog</h1>
+        <div>
+          <h2 class="text-2xl font-semibold leading-tight">Modal Dailog</h2>
+      </div>
         <app-modal-dialog></app-modal-dialog>
         <div class="px-4 py-6 sm:px-0">
           <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
         </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold leading-tight">Loader</h2>
+      </div>
+        <app-loader></app-loader>
+
+        <div>
+          <h2 class="text-2xl font-semibold leading-tight">Buttons</h2>
+      </div>
+        <app-buttons></app-buttons>
         <!-- /End replace -->
       </div>
     </main>

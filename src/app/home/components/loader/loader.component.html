@@ -1,0 +1,47 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-white pb-48">
+
+    <div *ngIf="show" wire:loading class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
+        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+    </div>
+  
+    <div class="flex space-x-8 text-3xl">
+
+        <div class="inline-block mr-2 mt-2">
+            <button type="button" (click)="toogle()" class="p-5 focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg">Toggle Overlay</button>
+         </div>
+  
+      <div class="animate-spin">
+          <div class="h-16 w-16 bg-orange-500 bg-opacity-50 rounded-full flex items-center justify-center">
+            <span class="text-5x1">
+                <svg
+                class="h-6 w-6 text-indigo-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+                </svg>
+            </span>
+          </div>
+      </div>
+
+      <!-- spin -->
+      <button class="animate-spin inline-block py-4 px-8 bg-yellow-500 text-yellow-100 rounded-lg">Spin</button>
+  
+      <!-- ping -->
+      <button class="animate-ping inline-block py-4 px-8 bg-blue-500 text-blue-100 rounded-lg">Ping</button>
+  
+      <!-- pulse -->
+      <button class="animate-pulse inline-block py-4 px-8 bg-red-500 text-red-100 rounded-lg">Pulse</button>
+  
+      <!-- bounce -->
+      <button class="animate-bounce inline-block py-4 px-8 bg-teal-500 text-teal-100 rounded-lg">Bounce</button>
+    </div>
+  
+  </div>
