@@ -78,7 +78,7 @@
                               </span>
                           </td>
                           <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <a href="javascript:void(0)" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                            <a (click)="openModal('user-info-modal', item)" href="javascript:void(0)" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                           </td>
                       </tr>
                   </tbody>
@@ -87,3 +87,5 @@
       </div>
   </div>
 </div>
+
+<app-user-info id="user-info-modal"></app-user-info>

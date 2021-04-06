@@ -11,9 +11,10 @@ import { TableFilterPipe } from './components/pipe/table-filter.pipe';
 import { TableSortPipe } from './components/pipe/table-sort.pipe';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { UserInfoComponent } from './components/modal/user-info/user-info.component';
 
 @NgModule({
-  declarations: [HomeComponent, FormLayoutComponent, DataTableComponent, ModalDialogComponent, TableFilterPipe, TableSortPipe, LoaderComponent, ButtonsComponent],
+  declarations: [HomeComponent, FormLayoutComponent, DataTableComponent, ModalDialogComponent, TableFilterPipe, TableSortPipe, LoaderComponent, ButtonsComponent, UserInfoComponent],
   entryComponents: [],
   imports: [
     CommonModule,
