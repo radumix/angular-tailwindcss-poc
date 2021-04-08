@@ -21,6 +21,7 @@
     "@angular/router": "~10.1.1",
     "@ngneat/tailwind": "^6.0.3",
     "lodash-es": "^4.17.21",
+    "ng2-pdf-viewer": "^6.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

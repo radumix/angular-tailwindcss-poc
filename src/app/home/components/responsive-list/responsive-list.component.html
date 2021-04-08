@@ -1,0 +1,43 @@
+
+  <div class="min-h-screen flex items-stretch text-white ">
+    <div [@leftPane]="leftPane" class="bg-white bg-no-repeat bg-cover relative items-center">
+          
+        <table style="width: 100%; text-align: center; color:black">
+            <tr (click)="openRightPane('Application Form')">
+                <td>
+                    <h1>Application Form</h1>
+                </td>
+            </tr>
+            <tr (click)="openRightPane('FNA Form')">
+                <td>
+                    <h1>FNA Form</h1>
+                </td>
+            </tr>
+            <tr (click)="openRightPane('Third Party Form')">
+                <td>
+                    <h1>Third Party Form</h1>
+                </td>
+            </tr>
+        </table>
+        
+     </div>
+
+    <div [@rightPane]="rightPane" class="bg-white bg-no-repeat bg-cover relative items-center">
+        <div class="bg-white shadow-lg rounded-lg  ml-2 mr-2 pl-2 pb-2">
+            <button (click)="closeRightPane()" type="button" class="bg-white  inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            <div style="height: 100%; width: 100%;">
+              <h2 class="text-gray-800 text-3xl font-semibold">{{filename}}</h2> <br>
+              <h2 class="text-gray-800 text-3xl font-semibold">Draggable Signer Here</h2> <br>
+              <pdf-viewer [src]="pdfSrc"
+              [render-text]="true"
+              style="display: block;"></pdf-viewer> 
+            </div>
+          </div>
+        
+    </div>
+  </div>

@@ -12,15 +12,18 @@ import { TableSortPipe } from './components/pipe/table-sort.pipe';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { UserInfoComponent } from './components/modal/user-info/user-info.component';
+import { ResponsiveListComponent } from './components/responsive-list/responsive-list.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
-  declarations: [HomeComponent, FormLayoutComponent, DataTableComponent, ModalDialogComponent, TableFilterPipe, TableSortPipe, LoaderComponent, ButtonsComponent, UserInfoComponent],
+  declarations: [HomeComponent, FormLayoutComponent, DataTableComponent, ModalDialogComponent, TableFilterPipe, TableSortPipe, LoaderComponent, ButtonsComponent, UserInfoComponent, ResponsiveListComponent],
   entryComponents: [],
   imports: [
     CommonModule,
     HomeRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    PdfViewerModule
   ]
 })
 export class HomeModule { }
